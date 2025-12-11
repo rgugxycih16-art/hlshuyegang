@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> 上肿输液港安装与PICC置管攻略 - 上海陪诊小河</title>
+    <title>上肿输液港安装与PICC置管攻略 - 上海陪诊小河</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Lucide Icons -->
@@ -100,37 +100,39 @@
                 </div>
             </div>
 
-            <!-- Prep Materials (恢复全部内容) -->
+            <!-- Prep Materials (Modified: Grid cols 2 forced) -->
             <div class="bg-white p-5 rounded-2xl shadow-sm border border-stone-100">
                 <h3 class="font-bold text-lg mb-3 flex items-center text-stone-700">
                     <i data-lucide="file-text" class="w-5 h-5 mr-2 text-emerald-500"></i>
                     术前准备材料 (必须齐全)
                 </h3>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    <div class="flex items-center justify-between p-3 rounded-lg bg-stone-50 border border-stone-100">
-                        <span class="text-sm font-medium text-stone-700">血常规报告</span>
-                        <span class="text-xs px-2 py-1 rounded font-semibold bg-red-100 text-red-600">7天内有效</span>
+                <!-- Changed to strictly grid-cols-2 -->
+                <div class="grid grid-cols-2 gap-3">
+                    <div class="flex flex-col justify-center p-3 rounded-lg bg-stone-50 border border-stone-100 h-full">
+                        <span class="text-sm font-medium text-stone-700 mb-1">血常规报告</span>
+                        <span class="text-xs px-2 py-0.5 rounded font-semibold bg-red-100 text-red-600 self-start">7天内有效</span>
                     </div>
-                    <div class="flex items-center justify-between p-3 rounded-lg bg-stone-50 border border-stone-100">
-                        <span class="text-sm font-medium text-stone-700">凝血功能报告</span>
-                        <span class="text-xs px-2 py-1 rounded font-semibold bg-red-100 text-red-600">2周内有效</span>
+                    <div class="flex flex-col justify-center p-3 rounded-lg bg-stone-50 border border-stone-100 h-full">
+                        <span class="text-sm font-medium text-stone-700 mb-1">凝血功能</span>
+                        <span class="text-xs px-2 py-0.5 rounded font-semibold bg-red-100 text-red-600 self-start">2周内有效</span>
                     </div>
-                    <div class="flex items-center justify-between p-3 rounded-lg bg-stone-50 border border-stone-100">
-                        <span class="text-sm font-medium text-stone-700">免疫检查报告</span>
-                        <span class="text-xs px-2 py-1 rounded font-semibold bg-blue-50 text-blue-600 border border-blue-100">1个月内有效</span>
+                    <div class="flex flex-col justify-center p-3 rounded-lg bg-stone-50 border border-stone-100 h-full">
+                        <span class="text-sm font-medium text-stone-700 mb-1">免疫检查</span>
+                        <span class="text-[10px] px-2 py-0.5 rounded font-semibold bg-blue-50 text-blue-600 border border-blue-100 self-start">1个月内</span>
                     </div>
-                    <div class="flex items-center justify-between p-3 rounded-lg bg-stone-50 border border-stone-100">
-                        <span class="text-sm font-medium text-stone-700">心电图报告</span>
-                        <span class="text-xs px-2 py-1 rounded font-semibold bg-blue-50 text-blue-600 border border-blue-100">1个月内有效</span>
+                    <div class="flex flex-col justify-center p-3 rounded-lg bg-stone-50 border border-stone-100 h-full">
+                        <span class="text-sm font-medium text-stone-700 mb-1">心电图</span>
+                        <span class="text-[10px] px-2 py-0.5 rounded font-semibold bg-blue-50 text-blue-600 border border-blue-100 self-start">1个月内</span>
                     </div>
-                    <div class="flex items-center justify-between p-3 rounded-lg bg-stone-50 border border-stone-100 col-span-1 sm:col-span-2">
+                    <!-- Full width for the last item -->
+                    <div class="flex items-center justify-between p-3 rounded-lg bg-stone-50 border border-stone-100 col-span-2">
                         <span class="text-sm font-medium text-stone-700">病历记录</span>
                         <span class="text-xs px-2 py-1 rounded font-semibold bg-blue-50 text-blue-600 border border-blue-100">含医生建议安装输液港记录</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Interactive Steps (Port - 恢复全部内容) -->
+            <!-- Interactive Steps (Port) -->
             <div>
                 <h3 class="font-bold text-lg text-stone-700 mb-4 pl-2 border-l-4 border-emerald-400">安装流程 (以徐汇院区为例)</h3>
                 <div class="ml-2">
@@ -138,8 +140,12 @@
                     <div class="step-item relative pl-8 pb-8 last:pb-0 group cursor-pointer transition-all duration-200" onclick="toggleStep(this)">
                         <div class="absolute left-[11px] top-6 bottom-0 w-0.5 bg-emerald-100"></div>
                         <div class="step-circle absolute left-0 top-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold border-2 border-white shadow-sm z-10 transition-all duration-300 bg-emerald-500 text-white ring-1 ring-emerald-100 group-hover:scale-110 group-hover:bg-emerald-400">1</div>
-                        <div class="step-content transition-all duration-300 p-3 -my-3 rounded-lg hover:bg-stone-50 border border-transparent">
-                            <h4 class="step-title font-bold text-stone-800 mb-2 transition-colors">门诊预约</h4>
+                        <div class="step-content transition-all duration-300 p-3 -my-3 rounded-lg bg-white shadow-sm border border-stone-100">
+                            <!-- Badge Added: 介入科 -->
+                            <h4 class="step-title font-bold text-stone-800 mb-2 transition-colors flex items-center gap-2">
+                                门诊预约
+                                <span class="bg-emerald-50 text-emerald-600 text-[10px] px-1.5 py-0.5 rounded border border-emerald-100 font-medium shrink-0">介入科</span>
+                            </h4>
                             <ul class="list-disc pl-5 space-y-1 text-sm text-stone-600">
                                 <li>挂<strong>介入科</strong> (即安装医生)。</li>
                                 <li>出示所有检查报告进行审核。</li>
@@ -152,12 +158,16 @@
                     <div class="step-item relative pl-8 pb-8 last:pb-0 group cursor-pointer transition-all duration-200" onclick="toggleStep(this)">
                         <div class="absolute left-[11px] top-6 bottom-0 w-0.5 bg-emerald-100"></div>
                         <div class="step-circle absolute left-0 top-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold border-2 border-white shadow-sm z-10 transition-all duration-300 bg-emerald-500 text-white ring-1 ring-emerald-100 group-hover:scale-110 group-hover:bg-emerald-400">2</div>
-                        <div class="step-content transition-all duration-300 p-3 -my-3 rounded-lg hover:bg-stone-50 border border-transparent">
-                            <h4 class="step-title font-bold text-stone-800 mb-2 transition-colors">手术当天</h4>
+                        <div class="step-content transition-all duration-300 p-3 -my-3 rounded-lg bg-white shadow-sm border border-stone-100">
+                             <!-- Badge Added: 3号楼1F -->
+                            <h4 class="step-title font-bold text-stone-800 mb-2 transition-colors flex items-center gap-2">
+                                手术当天
+                                <span class="bg-emerald-50 text-emerald-600 text-[10px] px-1.5 py-0.5 rounded border border-emerald-100 font-medium shrink-0">3号楼1F</span>
+                            </h4>
                             <div class="text-sm text-stone-600 space-y-2">
                                 <div class="flex items-start">
                                     <i data-lucide="map-pin" class="w-4 h-4 mr-1 mt-0.5 text-blue-500 flex-shrink-0"></i>
-                                    <span><strong>地点：</strong>徐汇院区 3号楼一楼 介入手术室外</span>
+                                    <span><strong>地点：</strong>徐汇院区 3号楼一楼 介入手术室</span>
                                 </div>
                                 <p><strong>交单：</strong>将预约单和资料交给介入室接收单子的医生。</p>
                                 <p><strong>时长：</strong>等待叫号，手术通常20-30分钟。</p>
@@ -171,8 +181,12 @@
                     <!-- Step 3 -->
                     <div class="step-item relative pl-8 pb-8 last:pb-0 group cursor-pointer transition-all duration-200" onclick="toggleStep(this)">
                         <div class="step-circle absolute left-0 top-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold border-2 border-white shadow-sm z-10 transition-all duration-300 bg-emerald-500 text-white ring-1 ring-emerald-100 group-hover:scale-110 group-hover:bg-emerald-400">3</div>
-                        <div class="step-content transition-all duration-300 p-3 -my-3 rounded-lg hover:bg-stone-50 border border-transparent">
-                            <h4 class="step-title font-bold text-stone-800 mb-2 transition-colors">术后处理</h4>
+                        <div class="step-content transition-all duration-300 p-3 -my-3 rounded-lg bg-white shadow-sm border border-stone-100">
+                             <!-- Badge Added: 8号楼1F -->
+                            <h4 class="step-title font-bold text-stone-800 mb-2 transition-colors flex items-center gap-2">
+                                术后处理
+                                <span class="bg-emerald-50 text-emerald-600 text-[10px] px-1.5 py-0.5 rounded border border-emerald-100 font-medium shrink-0">8号楼1F</span>
+                            </h4>
                             <ul class="list-disc pl-5 space-y-1 text-sm text-stone-600">
                                 <li>领取维护手册（本子）。</li>
                                 <li><strong>预约维护：</strong>建议提前预约手术次日的“输液港”号。</li>
@@ -201,8 +215,8 @@
                 </p>
                 <div class="grid grid-cols-2 gap-4">
                     <div class="text-center p-3 bg-stone-50 rounded-xl border border-stone-100">
-                        <p class="text-xs text-stone-400 mb-1">挂号/预约</p>
-                        <p class="font-bold text-green-700 text-sm leading-tight">8号楼1楼(徐汇)<br>门诊4楼(浦东)</p>
+                        <p class="text-xs text-stone-400 mb-1">挂号科室</p>
+                        <p class="font-bold text-green-700 text-sm leading-tight"> PICC 置管 </p>
                     </div>
                     <div class="text-center p-3 bg-stone-50 rounded-xl border border-stone-100">
                         <p class="text-xs text-stone-400 mb-1">维护频率</p>
@@ -211,25 +225,28 @@
                 </div>
             </div>
 
-            <!-- Preparation & Location (恢复全部内容) -->
+            <!-- Preparation & Location (Modified: All grid-cols-2) -->
             <div class="bg-white p-5 rounded-2xl shadow-sm border border-stone-100">
                 <h3 class="font-bold text-lg mb-4 flex items-center text-stone-700">
                     <i data-lucide="clock" class="w-5 h-5 mr-2 text-emerald-500"></i>
                     术前准备 & 时间地点
                 </h3>
                 
-                <div class="mb-4 space-y-2">
-                    <div class="flex items-center justify-between bg-stone-50 p-2 rounded border border-stone-100">
-                        <span class="text-sm font-semibold text-stone-700">医嘱要求</span>
-                        <span class="text-xs bg-stone-200 px-2 py-1 rounded text-stone-600">主治医生开具“PICC置管”医嘱</span>
+                <!-- Requirements: Changed to Grid 2 cols -->
+                <div class="grid grid-cols-2 gap-3 mb-4">
+                    <div class="flex flex-col justify-center p-3 rounded-lg bg-stone-50 border border-stone-100 h-full">
+                        <span class="text-sm font-semibold text-stone-700 mb-1">医嘱要求</span>
+                        <!-- Updated Style: Orange-Red Gradient -->
+                        <span class="text-[10px] leading-tight bg-gradient-to-r from-orange-50 to-red-50 text-orange-800 border border-orange-100 px-1.5 py-1 rounded">主治医生开具“PICC置管”医嘱</span>
                     </div>
-                    <div class="flex items-center justify-between bg-stone-50 p-2 rounded border border-stone-100">
-                        <span class="text-sm font-semibold text-stone-700">血常规报告</span>
-                        <span class="text-xs bg-red-100 px-2 py-1 rounded text-red-600 font-bold">1周内有效</span>
+                    <div class="flex flex-col justify-center p-3 rounded-lg bg-stone-50 border border-stone-100 h-full">
+                        <span class="text-sm font-semibold text-stone-700 mb-1">血常规</span>
+                        <span class="text-xs bg-red-100 px-2 py-1 rounded text-red-600 font-bold self-start">1周内有效</span>
                     </div>
                 </div>
 
-                <div class="grid md:grid-cols-2 gap-4 text-sm">
+                <!-- Locations: Changed to strictly Grid 2 cols -->
+                <div class="grid grid-cols-2 gap-3 text-sm">
                     <div class="border border-stone-200 rounded-lg p-3 bg-stone-50/50">
                         <strong class="block text-blue-700 mb-1">徐汇院区</strong>
                         <p class="text-stone-600">8号楼 1楼 服务台</p>
@@ -238,14 +255,15 @@
                         <strong class="block text-blue-700 mb-1">浦东院区</strong>
                         <p class="text-stone-600">门诊楼 4楼 J1/6号诊室</p>
                     </div>
-                    <div class="md:col-span-2 bg-blue-50 p-3 rounded-lg text-blue-800 text-center border border-blue-100">
+                    <!-- Time (Span 2) -->
+                    <div class="col-span-2 bg-blue-50 p-3 rounded-lg text-blue-800 text-center border border-blue-100">
                         <span class="font-bold">预约时间 (周一~周五)：</span>
                         8:00~11:30 / 13:00~16:30
                     </div>
                 </div>
             </div>
 
-            <!-- Interactive Steps (PICC - 恢复全部内容) -->
+            <!-- Interactive Steps (PICC) -->
             <div>
                 <h3 class="font-bold text-lg text-stone-700 mb-4 pl-2 border-l-4 border-emerald-400">置管流程 (徐汇院区)</h3>
                 <div class="ml-2">
@@ -253,8 +271,12 @@
                     <div class="step-item relative pl-8 pb-8 last:pb-0 group cursor-pointer transition-all duration-200" onclick="toggleStep(this)">
                         <div class="absolute left-[11px] top-6 bottom-0 w-0.5 bg-emerald-100"></div>
                         <div class="step-circle absolute left-0 top-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold border-2 border-white shadow-sm z-10 transition-all duration-300 bg-emerald-500 text-white ring-1 ring-emerald-100 group-hover:scale-110 group-hover:bg-emerald-400">1</div>
-                        <div class="step-content transition-all duration-300 p-3 -my-3 rounded-lg hover:bg-stone-50 border border-transparent">
-                            <h4 class="step-title font-bold text-stone-800 mb-2 transition-colors">预约与评估</h4>
+                        <div class="step-content transition-all duration-300 p-3 -my-3 rounded-lg bg-white shadow-sm border border-stone-100">
+                             <!-- Badge Added: 8号楼 -->
+                            <h4 class="step-title font-bold text-stone-800 mb-2 transition-colors flex items-center gap-2">
+                                预约与评估
+                                <span class="bg-emerald-50 text-emerald-600 text-[10px] px-1.5 py-0.5 rounded border border-emerald-100 font-medium shrink-0">8号楼</span>
+                            </h4>
                             <div class="text-sm text-stone-600 space-y-1">
                                 <p>前往 <strong>8号楼 1楼 PICC置管门诊</strong>。</p>
                                 <p>出示血常规报告 + 病史（含医嘱）进行人工预约。</p>
@@ -267,11 +289,15 @@
                     <div class="step-item relative pl-8 pb-8 last:pb-0 group cursor-pointer transition-all duration-200" onclick="toggleStep(this)">
                         <div class="absolute left-[11px] top-6 bottom-0 w-0.5 bg-emerald-100"></div>
                         <div class="step-circle absolute left-0 top-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold border-2 border-white shadow-sm z-10 transition-all duration-300 bg-emerald-500 text-white ring-1 ring-emerald-100 group-hover:scale-110 group-hover:bg-emerald-400">2</div>
-                        <div class="step-content transition-all duration-300 p-3 -my-3 rounded-lg hover:bg-stone-50 border border-transparent">
-                            <h4 class="step-title font-bold text-stone-800 mb-2 transition-colors">购买物资与宣教</h4>
+                        <div class="step-content transition-all duration-300 p-3 -my-3 rounded-lg bg-white shadow-sm border border-stone-100">
+                             <!-- Badge Added: 3号楼 -->
+                            <h4 class="step-title font-bold text-stone-800 mb-2 transition-colors flex items-center gap-2">
+                                购买物资与宣教
+                                <span class="bg-emerald-50 text-emerald-600 text-[10px] px-1.5 py-0.5 rounded border border-emerald-100 font-medium shrink-0">3号楼</span>
+                            </h4>
                             <ul class="list-disc pl-5 space-y-1 text-sm text-stone-600">
                                 <li>进评估室评估。</li>
-                                <li><strong>购买配件：</strong>按指引（通常3号楼1楼，康实药房）购买PICC穿刺包/维护包。</li>
+                                <li><strong>购买配件：</strong>按指引（通常3号楼1楼，康实药房）购买PICC穿刺架，维护包。</li>
                                 <li>观看置管宣教视频。</li>
                             </ul>
                         </div>
@@ -279,27 +305,41 @@
 
                     <!-- Step 3 -->
                     <div class="step-item relative pl-8 pb-8 last:pb-0 group cursor-pointer transition-all duration-200" onclick="toggleStep(this)">
+                        <div class="absolute left-[11px] top-6 bottom-0 w-0.5 bg-emerald-100"></div>
                         <div class="step-circle absolute left-0 top-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold border-2 border-white shadow-sm z-10 transition-all duration-300 bg-emerald-500 text-white ring-1 ring-emerald-100 group-hover:scale-110 group-hover:bg-emerald-400">3</div>
-                        <div class="step-content transition-all duration-300 p-3 -my-3 rounded-lg hover:bg-stone-50 border border-transparent">
-                            <h4 class="step-title font-bold text-stone-800 mb-2 transition-colors">手术与拍片</h4>
+                        <div class="step-content transition-all duration-300 p-3 -my-3 rounded-lg bg-white shadow-sm border border-stone-100">
+                             <!-- Badge Added: 8号楼 -->
+                            <h4 class="step-title font-bold text-stone-800 mb-2 transition-colors flex items-center gap-2">
+                                置管
+                                <span class="bg-emerald-50 text-emerald-600 text-[10px] px-1.5 py-0.5 rounded border border-emerald-100 font-medium shrink-0">8号楼</span>
+                            </h4>
                             <div class="text-sm text-stone-600 space-y-2">
-                                <p><strong>置管：</strong>8号楼置管室，约15分钟。</p>
-                                <div class="border-t border-dashed border-stone-300 my-2 pt-2">
-                                    <p class="font-semibold text-stone-700 mb-1">术后必须拍片确认位置：</p>
-                                    <ol class="list-decimal pl-5 space-y-1">
-                                        <li>前往 <strong>1号楼 B1层（放射科）</strong>签到拍X光。</li>
-                                        <li>返回 8号楼1楼，医生确认位置无误。</li>
-                                        <li>领取维护记录本。</li>
-                                    </ol>
-                                </div>
+                                <p>在 <strong>8号楼置管室</strong>，过程约15分钟。</p>
                             </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="step-item relative pl-8 pb-8 last:pb-0 group cursor-pointer transition-all duration-200" onclick="toggleStep(this)">
+                        <div class="step-circle absolute left-0 top-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold border-2 border-white shadow-sm z-10 transition-all duration-300 bg-emerald-500 text-white ring-1 ring-emerald-100 group-hover:scale-110 group-hover:bg-emerald-400">4</div>
+                        <div class="step-content transition-all duration-300 p-3 -my-3 rounded-lg bg-white shadow-sm border border-stone-100">
+                             <!-- Badge Added: 1号楼B1 -->
+                            <h4 class="step-title font-bold text-stone-800 mb-2 transition-colors flex items-center gap-2">
+                                拍片确认
+                                <span class="bg-emerald-50 text-emerald-600 text-[10px] px-1.5 py-0.5 rounded border border-emerald-100 font-medium shrink-0">1号楼B1</span>
+                            </h4>
+                            <ol class="list-decimal pl-5 space-y-1 text-sm text-stone-600">
+                                <li>前往 <strong>1号楼 B1层（放射科）</strong>签到拍X光。</li>
+                                <li>返回 8号楼1楼，医生确认位置无误。</li>
+                                <li>领取维护记录本。</li>
+                            </ol>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- 6. Footer (恢复“重要 Tips”部分) -->
+        <!-- 6. Footer -->
         <section class="mt-8 border-t-2 border-stone-200 pt-6">
             <h3 class="text-lg font-bold flex items-center mb-4 text-stone-700">
                 <i data-lucide="bookmark" class="w-5 h-5 mr-2 text-emerald-500"></i>
@@ -323,12 +363,18 @@
                         </li>
                     </ul>
                 </div>
-                <div class="bg-white p-4 rounded-xl shadow-sm border border-stone-100">
-                    <h4 class="font-semibold text-blue-700 mb-2">时间管理建议</h4>
-                    <ul class="space-y-2 text-sm list-disc pl-4 text-stone-600">
-                        <li>输液港手术很难约到当天，通常需要<strong>隔天</strong>，请预留充足时间。</li>
-                        <li>PICC置管顺利的话，<strong>半天内</strong>可以完成全流程。</li>
-                    </ul>
+                <!-- Updated Time Management Tips Section -->
+                <div class="bg-gradient-to-r from-orange-50 to-red-50 p-4 rounded-xl border border-orange-100 flex items-start gap-3">
+                    <div class="bg-orange-100 p-2 rounded-full text-orange-600 shrink-0">
+                        <i data-lucide="clock" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-orange-800 text-sm">时间管理 Tips</h4>
+                        <p class="text-xs text-orange-700 mt-1 leading-relaxed">
+                            1. <strong>输液港手术</strong>一般很难约到当天，通常需要隔天，请预留时间。<br/>
+                            2. <strong>PICC置管</strong>如果顺利，半天内可以完成全流程。
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -437,11 +483,11 @@
             // Circle: 橙色、变大、光晕
             circle.className = "step-circle absolute left-0 top-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold border-2 border-white shadow-sm z-10 transition-all duration-300 bg-orange-500 text-white ring-4 ring-orange-100 scale-110";
             
-            // Content: 背景变色
-            content.className = "step-content transition-all duration-300 p-3 -my-3 rounded-lg bg-orange-50/50 border border-orange-100";
+            // Content: 背景变色 (Active state)
+            content.className = "step-content transition-all duration-300 p-3 -my-3 rounded-lg bg-orange-50 border border-orange-100 shadow-sm";
             
-            // Title: 橙色
-            title.className = "step-title font-bold text-orange-700 mb-2 transition-colors";
+            // Title: 橙色 (保留 flex 样式)
+            title.className = "step-title font-bold text-orange-700 mb-2 transition-colors flex items-center gap-2";
         }
 
         function resetStepStyle(element) {
@@ -454,11 +500,11 @@
             // Reset Circle: 绿色
             circle.className = "step-circle absolute left-0 top-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold border-2 border-white shadow-sm z-10 transition-all duration-300 bg-emerald-500 text-white ring-1 ring-emerald-100 group-hover:scale-110 group-hover:bg-emerald-400";
             
-            // Reset Content
-            content.className = "step-content transition-all duration-300 p-3 -my-3 rounded-lg hover:bg-stone-50 border border-transparent";
+            // Reset Content: White Card (Standard state)
+            content.className = "step-content transition-all duration-300 p-3 -my-3 rounded-lg bg-white border border-stone-100 shadow-sm";
             
-            // Reset Title
-            title.className = "step-title font-bold text-stone-800 mb-2 transition-colors";
+            // Reset Title (保留 flex 样式)
+            title.className = "step-title font-bold text-stone-800 mb-2 transition-colors flex items-center gap-2";
         }
 
         // 3. 弹窗与二维码逻辑 (Modal & QR)
